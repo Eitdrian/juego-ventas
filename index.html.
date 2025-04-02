@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego de Ventas</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { font-size: 20px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Juego: Evolución de la Función de Ventas</h1>
+    <p>Haz clic en el botón para conocer una estrategia de ventas.</p>
+    <button onclick="mostrarEstrategia()">Obtener Estrategia</button>
+    <p id="estrategia"></p>
+
+    <script>
+        const estrategias = [
+            "Escuchar activamente al cliente.",
+            "Personalizar la propuesta de valor.",
+            "Utilizar ventas consultivas.",
+            "Aprovechar la tecnología en el proceso de ventas.",
+            "Crear relaciones a largo plazo con los clientes."
+        ];
+
+        function mostrarEstrategia() {
+            const indice = Math.floor(Math.random() * estrategias.length);
+            document.getElementById("estrategia").innerText = estrategias[indice];
+        }
+    </script>
+</body>
+</html>
